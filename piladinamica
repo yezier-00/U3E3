@@ -1,0 +1,60 @@
+public class Piladinamica {
+  
+    nodopila cima;
+    int tamaño;
+    public boolean vacia(){
+        return cima ==null;
+    }
+    public void insertar(int numero){
+                         
+        nodopila nodo=new nodopila();
+        nodo.siguiente=cima;
+        cima=nodo;
+        tamaño++;  
+                    
+        
+               
+         
+        
+            
+                                       
+                               
+    } //metodo insertar
+  public void sacar(){
+        //int aux;
+      //aux=cima.elemento;
+      if(vacia()){
+          System.out.println("esta vacia primero debes insetar daos:");
+      }else{
+     
+     int contador = 0;
+        
+    if(contador==5){
+        
+        cima=cima.siguiente;
+        tamaño--;   
+            contador ++;
+        pila.insertar();
+     }
+   
+  
+     
+      }
+   
+  }//metodo sacar
+  public void mostrar(){
+      if(vacia()){
+          System.out.println("Esta vacia primero debes insertar datos:");
+      }else{
+      
+      nodopila recorre=cima;
+      while(recorre!=null){
+          System.out.println(recorre.elemento);
+          recorre=recorre.siguiente;
+          
+        }
+      } 
+  }//metodo sacar
+   
+} //class 
+
