@@ -1,0 +1,51 @@
+import java.util.Scanner;
+import java.util.Random;
+public class main {
+    
+    public static void main(String[]args){ 
+       int contador=0;
+        String aux;
+        int numero;
+        int tamaño;
+        Scanner sn=new Scanner(System.in);
+        boolean salir=false;
+        int opcion;
+        Piladinamica pila=new Piladinamica();
+        while(!salir){
+            System.out.println("Dame una opcion del menu:");          
+            System.out.println("1.-INSERTAR");            
+            System.out.println("2.-ELIMINAR");
+            System.out.println("3.-MOSTRAR");            
+            System.out.println("4.-SALIR:");
+               opcion=sn.nextInt();
+              
+            switch(opcion){                               
+                case 1:
+                //System.out.println("palabra a insertar:");
+                //String palabra=sn.next();
+                    
+                //int dato=sn.nextInt();
+                   for (int i = 0; i < 10; i++) {
+                        int ls=500,li=50;
+                        numero=(int)(Math.random()*(ls-li))+1; 
+                        pila.insertar(numero);
+                   }
+                  
+                    break;
+                case 2:
+                    pila.sacar();                                                           
+                    break;
+                case 3:
+                     pila.mostrar();
+                    break;
+                case 4:
+                    salir=true;
+                    break;
+                default:   
+                    System.out.println("la opcion no esta en el menu");
+            }
+             
+               }
+        System.out.println("final del menu");
+    }//main
+}//class
